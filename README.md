@@ -1,1 +1,1 @@
-![Script](./testImage.png)
+![script](./testImage.png)
