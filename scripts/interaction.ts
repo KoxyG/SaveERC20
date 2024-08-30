@@ -23,16 +23,16 @@ async function main() {
 
     depositTx.wait();
 
-    // const contractBalanceAfterDeposit = await saveERC20.getContractBalance();
+    const contractBalanceAfterDeposit = await saveERC20.getContractBalance();
 
-    // console.log("Contract balance after :::", contractBalanceAfterDeposit);
+    console.log("Contract balance after :::", contractBalanceAfterDeposit);
 
 
 
    // Withdrawal Interaction
-    // const contractBalanceBeforeWitdrawal = await saveERC20.getContractBalance();
-    
-    // console.log("Contract balance before witdrawal:::", contractBalanceBeforeDeposit);
+    const contractBalanceBeforeWitdrawal = await saveERC20.getContractBalance();
+
+    console.log("Contract balance before witdrawal:::", contractBalanceBeforeWitdrawal);
     const withdrawalAmount = ethers.parseUnits("50", 18);   
     const withdrawTx = await saveERC20.withdraw(depositAmount);
 
@@ -40,9 +40,9 @@ async function main() {
 
     depositTx.wait();
 
-    // const contractBalanceAfterWithdrawal = await saveERC20.getContractBalance();
+    const contractBalanceAfterWithdrawal = await saveERC20.getContractBalance();
 
-    // console.log("Contract balance after :::", contractBalanceAfterWithdrawal);
+    console.log("Contract balance after :::", contractBalanceAfterWithdrawal);
 
 
 
